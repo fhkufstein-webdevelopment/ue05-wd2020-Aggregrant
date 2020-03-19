@@ -41,13 +41,12 @@ $(document).ready(function () {
     });
 
 
-    $('.deleteTrigger').click(function () {
+    $(document).on('click','.deleteTrigger', function () {
         //@todo
+        if (confirm("Wollen Sie den Benutzer wirklich löschen?"))
         //1. remove current user from dom
-        $('#tableBody tr:last').remove();
+        $(this).parents("tr").remove();
         //2. update number of current users
-        count--;
-
         //your code follows here
 
 
